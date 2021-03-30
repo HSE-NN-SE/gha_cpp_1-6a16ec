@@ -21,7 +21,14 @@ TEST(EmployeesHeirs, IdAutoincrement) {
     EXPECT_EQ(4, p4.getId());
 }
 
-//TEST(DriverTest, MonthSalary) {
-////    Employee p5(Position::Driver, 200);
-////    Driver(200);
-//}
+TEST(DriverTest, MonthSalary) {
+    Driver driver(200);
+    driver.calc();
+    EXPECT_EQ(34000, driver.getPayment());
+}
+
+TEST(CleanerTest, MonthSalary) {
+    Cleaner cleaner(200);
+    cleaner.calc();
+    EXPECT_EQ(32000, cleaner.getPayment());
+}

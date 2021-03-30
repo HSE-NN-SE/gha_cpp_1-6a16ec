@@ -5,39 +5,38 @@
 #ifndef INCLUDE_PERSONAL_H_
 #define INCLUDE_PERSONAL_H_
 
-class Personal : public Employee, WorkBaseTime {
+class Personal : public Employee, protected WorkBaseTime {
  public:
     explicit Personal(Position position, int salary) :
                                     Employee(position),
-                                    salary(salary)
-                                    {}
-//    int calcBase(int salary, int wtime);
-    virtual int calcBase(int salary, int wtime);
-    virtual int calcBonus();
-//    void calc () {}
-//    virtual int calcBase(int salary, int wtime) { return 0; }
-// protected:
+                                    salary(salary) {
+        this->setWorkTime(40 * 4);
+    }
+    int calcBase(int salary, int wtime);
+ protected:
     int salary;
 };
 
 class Driver : public Personal {
  public:
-    explicit Driver(int salary) : Personal(Position::Driver, salary) {}
-    int calcBase(int, int) override {
-        return 1;
-    }
-    int calcBonus() override {
-        return 2;
-    }
-//    void calc();
+    explicit Driver(int salary) :
+                                Personal(Position::Driver, salary)
+                                {}
+    int calcBonus();
+    void calc();
+    void printInfo();
 };
+
 
 class Cleaner : public Personal {
  public:
-    explicit Cleaner(int salary) : Personal(Position::Cleaner, salary) {}
+    explicit Cleaner(int salary) :
+                                Personal(Position::Driver, salary)
+                                {}
+    int calcBonus();
     void calc();
+    void printInfo();
 };
-
 
 
 #endif  // INCLUDE_PERSONAL_H_

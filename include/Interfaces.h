@@ -5,10 +5,19 @@
 
 class WorkBaseTime {
  public:
-    virtual int calsBase(int salary, int wtime) = 0;
-    virtual int calsBonus() = 0;
+    virtual int calcBase(int salary, int wtime) = 0;
+    virtual int calcBonus() = 0;
 };
 
+class ProjectBudget {
+ public:
+    virtual int calcBudgetPart(float part, int budget) = 0;
+    virtual int calcProAdditions() = 0;
+};
 
+//class Heading {
+// public:
+//    int calcHeads() = 0;
+//};
 
 #endif  // INCLUDE_INTERFACES_H_
