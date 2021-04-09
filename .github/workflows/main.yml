@@ -63,5 +63,5 @@ jobs:
           to: ${{ secrets.MY_TG_TO }}
           token: ${{ secrets.MY_TG_TOKEN }}
           message: |
-            "Всё крашнулось \xF0\x9F\x98\x93"
+            "Всё крашнулось ❌"
         
