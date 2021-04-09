@@ -58,4 +58,4 @@ jobs:
       
       - name: if_failure
         if: ${{ failure() }}
-          echo Hello, world!
+        run: echo failure
