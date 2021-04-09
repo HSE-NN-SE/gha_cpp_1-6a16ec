@@ -58,4 +58,10 @@ jobs:
       
       - name: if_failure
         if: ${{ failure() }}
-        run: echo failure
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.MY_TG_TO }}
+          token: ${{ secrets.MY_TG_TOKEN }}
+          message: |
+            "Всё крашнулось \xF0\x9F\x98\x93"
+        
