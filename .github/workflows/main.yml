@@ -54,4 +54,4 @@ jobs:
           token: ${{ secrets.MY_TG_TOKEN }}
           message: |
             C++ сила.
-          document: main64.exe
+          document: ../main64.exe
