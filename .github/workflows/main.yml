@@ -38,7 +38,7 @@ jobs:
       - name: Install g++
         run: sudo apt-get install mingw-w64
       - name: compile code
-        run: x86_64-w64-mingw32-gcc -o main64.exe main.cpp
+        run: x86_64-w64-mingw32-gcc -o main64.exe src/*.cpp include/*.h
         
       - name: testest
         uses: actions/upload-artifact@v2
