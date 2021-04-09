@@ -36,15 +36,15 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Install g++
-        run: sudo apt-get install g++ 
+        run: sudo apt-get install mingw-w64
       - name: compile code
-        run: g++ -c *.cpp && g++ *.o -o a.out
+        run: x86_64-w64-mingw32-gcc -o main64.exe main.cpp
         
       - name: testest
         uses: actions/upload-artifact@v2
         with:
           name: my-artifact
-          path: a.out
+          path: main64.exe
       - name: send custom message
         uses: appleboy/telegram-action@master
         with:
