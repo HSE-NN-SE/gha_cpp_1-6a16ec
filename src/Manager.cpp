@@ -2,9 +2,9 @@
 #include <iostream>
 #include "../include/Manager.h"
 
-Project::~Project() {
-    delete[] this->projects;
-}
+// Project::~Project() {
+//     delete[] this->projects;
+// }
 
 uint16_t Project::nextId() const {
     static uint16_t new_id = 0;
