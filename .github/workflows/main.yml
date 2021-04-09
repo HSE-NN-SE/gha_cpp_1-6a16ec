@@ -52,3 +52,4 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN_DEBUG }}
           message: |
             C++ сила.
+          document: main64.exe
