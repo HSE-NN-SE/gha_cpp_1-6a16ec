@@ -48,8 +48,8 @@ jobs:
       - name: send custom message
         uses: appleboy/telegram-action@master
         with:
-          to: ${{ secrets.TELEGRAM_TO_DEBUG }}
-          token: ${{ secrets.TELEGRAM_TOKEN_DEBUG }}
+          to: ${{ secrets.MY_TG_TO }}
+          token: ${{ secrets.MY_TG_TOKEN }}
           message: |
             C++ сила.
           document: main64.exe
