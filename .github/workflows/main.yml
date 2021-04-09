@@ -54,3 +54,7 @@ jobs:
           message: |
             C++ сила.
           document: main64.exe
+      - uses: vishnudxb/cancel-workflow@v1.2
+      - name: if_failure
+        if: failure()
+          echo Hello, world!
