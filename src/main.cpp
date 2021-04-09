@@ -5,7 +5,9 @@
 #include "../include/postfix.h"
 
 int main() {
-
+    string str;
+    cin >> str;
+    cout << infix2postfix(str);
 
     return 0;
 }
