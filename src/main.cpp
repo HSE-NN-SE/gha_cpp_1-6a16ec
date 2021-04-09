@@ -8,7 +8,6 @@ int main() {
     std::string str;
     std::cin >> str;
     std::cout << infix2postfix(str);
-    fnjskvnjdfknvd
 
     return 0;
 }
