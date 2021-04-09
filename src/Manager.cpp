@@ -2,7 +2,7 @@
 #include <iostream>
 #include "../include/Manager.h"
 
-Project::~ProjectManager() {
+Project::~Project() {
     delete[] this->projects;
 }
 
