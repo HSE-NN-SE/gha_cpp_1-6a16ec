@@ -4,7 +4,7 @@
 
 #include "../include/postfix.h"
 
-int main111() {
+int main() {
 
 
     return 0;
